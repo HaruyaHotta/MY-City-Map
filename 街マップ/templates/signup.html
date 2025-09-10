@@ -1,0 +1,89 @@
+{% block content %}
+<style>
+  body {
+    background-color: #f4f4f9; /* 背景色 */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .signup-container {
+    background-color: #ffffff; /* 白いコンテナ */
+    padding: 40px;
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 立体的な影 */
+    width: 350px;
+    text-align: center;
+  }
+
+  h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #28a745; /* 新規登録ボタンの背景色 */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #218838; /* ホバー時の色 */
+  }
+</style>
+
+<div class="signup-container">
+  <h1>ユーザー登録</h1>
+  <form method = "POST">
+    <label for = "username">ユーザー名</label>
+    <input type = "text" name = "username">
+    <label for = "password">パスワード</label>
+    <input type = "password" name = "password">
+    <input type = "submit" value = "新規登録">
+  </form>
+</div>
+{% endblock %}
