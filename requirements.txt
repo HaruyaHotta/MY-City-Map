@@ -1,0 +1,8 @@
+Flask==2.3.2
+Flask-SQLAlchemy==3.0.3
+Flask-Login==0.6.2
+Werkzeug==2.3.7
+pytz==2023.3.post1
+Flask-Migrate==4.0.5
+gunicorn
+python-dotenv
